@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>books Information update </title>
+</head>
+<body>
+<form method="POST" action="/update/{{bookms.id}}">
+ {%csrf_token%}
+    <h3>Update Books details </h3>
+    <div>
+        <label>Book Id</label>
+        <div>
+            <input name="bId" value="{{bookms.sId}}">
+        </div>
+    </div>
+
+     <div>
+        <label>Book Name</label>
+        <div>
+            <input name="bName" value="{{bookms.sName}}">
+        </div>
+    </div>
+
+     <div>
+        <label>Author Name</label>
+        <div>
+            <input name="bAuthor" value="{{bookms.sAuthor}}">
+        </div>
+    </div>
+
+     <div>
+        <label>Publish year</label>
+        <div>
+            {{form1.bPublish}}
+            <input name="bPublish" value="{{bookms.bPublish}}">
+        </div>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

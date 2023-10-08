@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOKS</title>
+</head>
+<body>
+<p>Get All Books</p>
+<p>List of Books</p>
+
+<table>
+  <thead>
+  <tr>
+    <th>Book Id</th>
+    <th>Book name</th>
+    <th>Book author</th>
+    <th>Book publish year</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for booksm in booksms %}
+  <tr>
+    <td>{{booksms.bId}}</td>
+    <td>{{booksms.bName}}</td>
+    <td>{{booksms.bAuthor}}</td>
+    <td>{{booksms.bPublish}}</td>
+    <td>
+      <a href="/edit/{{booksms.id}}">Edit</a>
+      <a href="/delete/{{booksms.id}}">Delete</a>
+    </td>
+   </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>
